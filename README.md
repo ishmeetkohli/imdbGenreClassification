@@ -1,28 +1,15 @@
-# imdbGenreClassification
-Movie Genre Classification using Plot
 
----
-abstract: |
-    Websites like Netflix and HBO Go, provide lists of movies based on
-    genres, this makes it easier for user to select the movie that interests
-    him/her based on the genre he/she is more inclined towards. Tagging of
-    movies is a complex process and usually involves a manual process where
-    the movies are assigned to one or more Genres based on the suggestions
-    sent by the users and consumers. If we can automate this process of
-    movie tagging, not only will it be fast , save human effort but it will
-    be more accurate than an untrained human as well.
-author:
-- |
-    Ishmeet Singh Kohli (V00842680)\
-    Graduate Student, Department of Computer Science
-bibliography:
-- 'references.bib'
-date: '![image](images/movies.jpg){height="2in"}'
-nocite: '[@*]'
-title: |
-    Movie Genre Classification using Plot: Predicting Movie Genre using IMDB
-    Data
-...
+# Movie Genre Classification using Plot
+
+## Abstract
+Websites like Netflix and HBO Go, provide lists of movies based on
+genres, this makes it easier for user to select the movie that interests
+him/her based on the genre he/she is more inclined towards. Tagging of
+movies is a complex process and usually involves a manual process where
+the movies are assigned to one or more Genres based on the suggestions
+sent by the users and consumers. If we can automate this process of
+movie tagging, not only will it be fast , save human effort but it will
+be more accurate than an untrained human as well.
 
 Introduction
 ============
@@ -65,17 +52,9 @@ Features Selected
 Although the api returns a lot of data about the movies/series, I just
 selected some features out of the whole set which are as follows :
 
-$\bullet$
-
-:   Movie ID
-
-$\bullet$
-
-:   Plot : Full (choices were Short or Full)
-
-$\bullet$
-
-:   Genre
+* Movie ID
+* Plot : Full (choices were Short or Full)
+* Genre
 
 There are movies which are associated with more than one Genre and there
 can be as much as 4 Genres. I selected the first one as the main Genre
@@ -87,34 +66,17 @@ Pruning
 The process to cache all the data into a CSV file had a logic where
 movies were pruned and only those titles were selected which :
 
-$\bullet$
-
-:   Were of ‘Movie’ type
-
-$\bullet$
-
-:   Length of plot string was more than 50
-
-$\bullet$
-
-:   Genre is not equal to ‘N/A’ (there were some cases with this value)
-
-$\bullet$
-
-:   Language is ‘English’
+* Were of ‘Movie’ type
+* Length of plot string was more than 50
+* Genre is not equal to ‘N/A’ (there were some cases with this value)
+* Language is ‘English’
 
 Numbers
 -------
 
 Here are some numbers for my data:
-
-$\bullet$
-
-:   Number of titles collected : 4456
-
-$\bullet$
-
-:   Genres Collected : 19
+* Number of titles collected : 4456
+* Genres Collected : 19
 
   ----------- ------------- -----------
   Comedy      Action        Drama
@@ -142,19 +104,9 @@ Data Preprocessing
 
 After all the data was collected, some preprocessing was done on it:
 
-$\bullet$
-
-:   Any/all use of HTML tags were removed using BeautifulSoup library.
-
-$\bullet$
-
-:   Punctuation, Numbers and special characters were removed using a
-    regex find and replace.
-
-$\bullet$
-
-:   All the stop words which were irrelevant to the context were removed
-    using stopwords from Natural Language Toolkit (NLTK)
+* Any/all use of HTML tags were removed using BeautifulSoup library.
+* Punctuation, Numbers and special characters were removed using a regex find and replace.
+* All the stop words which were irrelevant to the context were removed using stopwords from Natural Language Toolkit (NLTK)
 
 Data Mining
 ===========

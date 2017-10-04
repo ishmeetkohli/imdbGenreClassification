@@ -274,7 +274,7 @@ Here is a summary of all the results:
 used](images/conclusions.png)
 
 As you can see from this table, the best accuracy was achieved by using
-SVM with tfidf and an accuracy of **(**75.8) was achieved.
+SVM with tfidf and an accuracy of **75.8** was achieved.
 
 Limitations and future work
 ===========================

@@ -44,7 +44,7 @@ all the the data about a movie/series in a json/xml format given the
 imdb id of the movie. I started with a seed title ID and kept on
 increamenting it until I reached the target number of movies.
 
-![OMDB Api](images/omdb.png){width="50.00000%"}
+![OMDB Api](images/omdb.png)
 
 Features Selected
 -----------------
@@ -78,15 +78,17 @@ Here are some numbers for my data:
 * Number of titles collected : 4456
 * Genres Collected : 19
 
-  ----------- ------------- -----------
-  Comedy      Action        Drama
-  Animation   Documentary   Adventure
-  Biography   Horror        Fantasy
-  Mystery     Romance       Sci-Fi
-  Family      Thriller      Short
-  War         Musical       Western
-  Crime                     
-  ----------- ------------- -----------
+
+|               |               |       |
+| ------------- |:-------------:| -----:|
+| Comedy      | Action        | Drama |
+| Animation   | Documentary   | Adventure |
+| Biography   | Horror        | Fantasy |
+| Mystery     | Romance       | Sci-Fi |
+| Family      | Thriller      | Short |
+| War         | Musical       | Western |
+| Crime        |              |       |        
+
 
 The distibution of movies towards different genres is shown in figure 2.
 As you can see that the number of comedy records is way more than any
@@ -97,7 +99,7 @@ naive classifier which classifies all the movies as comedy movies, we
 will still have an accuracy of 25 percent of the total genres. We have
 to do a lot better than that in order to produce useful trends.
 
-![image](images/genres.png){width="\textwidth"}
+![image](images/genres.png)
 
 Data Preprocessing
 ==================
@@ -116,7 +118,7 @@ respectively. After the split, the number of testing records were found
 to be : 446. And its distribution is shown in figure 3.
 
 ![Comedy vs others - for test
-data](images/test_data.png){width="50.00000%"}
+data](images/test_data.png)
 
 Note that the distribution is shown just for comedy records vs other
 records since we are using one-vs-rest approach where we will test
@@ -151,7 +153,7 @@ Results:
   **F Measure**   0.495
   --------------- -------
 
-![Confusion Matrix for SVM](images/svm.png){width="50.00000%"}
+![Confusion Matrix for SVM](images/svm.png)
 
 Logistic Regression
 -------------------
@@ -169,7 +171,7 @@ Results:
   --------------- -------
 
 ![Confusion Matrix for Logistic
-Regression](images/logisticRegression.png){width="50.00000%"}
+Regression](images/logisticRegression.png)
 
 K Nearest Neighbors
 -------------------
@@ -188,7 +190,7 @@ Results:
   --------------- -------
 
 ![Confusion Matrix for K Nearest
-Neighbors](images/knn.png){width="50.00000%"}
+Neighbors](images/knn.png)
 
 TFIDF
 -----
@@ -204,7 +206,7 @@ also the weight associated with each word in the vocabulary to further
 improve the results. It is given by the formula :
 
 ![Term frequency inverse document frequency
-formula](images/tfidf.png){width="50.00000%"}
+formula](images/tfidf.png)
 
 where, wki is the frequncy of the k-th word in the i-th movie’s synopsis
 (di) and m is the number of training/test sets.
@@ -225,7 +227,7 @@ values. Here are the results :
   --------------- -------
 
 ![Confusion Matrix for SVM with
-tfidf](images/svm_tfidf.png){width="50.00000%"}
+tfidf](images/svm_tfidf.png)
 
 Logistic Regression with tfidf
 ------------------------------
@@ -243,7 +245,7 @@ Results:
   --------------- -------
 
 ![Confusion Matrix for Logistic Regression with
-tfidf](images/logistic_tfidf.png){width="50.00000%"}
+tfidf](images/logistic_tfidf.png)
 
 K Nearest Neighbors with tfidf
 ------------------------------
@@ -261,7 +263,7 @@ Results:
   --------------- -------
 
 ![Confusion Matrix for KNN with
-tfidf](images/knn_tfidf.png){width="50.00000%"}
+tfidf](images/knn_tfidf.png)
 
 Conclusions
 ===========
@@ -269,7 +271,7 @@ Conclusions
 Here is a summary of all the results:
 
 ![Comparison among all the methods
-used](images/conclusions.png){width="50.00000%"}
+used](images/conclusions.png)
 
 As you can see from this table, the best accuracy was achieved by using
 SVM with tfidf and an accuracy of **(**75.8) was achieved.
